@@ -1,0 +1,146 @@
+/* PAGE */
+.signup-page {
+  background: #f7f7f7;
+  min-height: 100vh;
+  padding-top: 120px; /* space under fixed navbar */
+  display: flex;
+  justify-content: center;
+}
+
+.signup-header {
+  text-align: center;
+  line-height: 0.3em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* CARD */
+.signup-card {
+  max-width: 700px;
+  width: 100%;
+  height: 75vh;
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* STEP AREA */
+.step {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 0 px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* ERROR */
+.error {
+  font-size: 12px;
+  color: #777;
+  line-height: 0.3em;
+}
+
+/* SUCCESS */
+.success {
+  background: #e6f4ea;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* MEDIUMS */
+.medium-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 3em;
+}
+
+.medium-btn {
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.medium-btn.active {
+  background: black;
+  color: white;
+}
+
+/* ARTWORK */
+.art-card {
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* NAVIGATION */
+.nav-buttons {
+  display: flex;
+  margin-top: 15px;
+}
+
+.nav-buttons .left {
+  margin-right: auto;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: black;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+/* CREATE PROFILE BUTTON */
+.btn-submit {
+  background: black;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 4em;
+  width: 220px;
+  align-self: center;
+  font-size: 18px;
+}

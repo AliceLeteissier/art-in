@@ -1,0 +1,43 @@
+.artist-profiles-container {
+  padding-top: 6rem; /* instead of 120px */
+}
+
+.artist-profiles-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  margin-top: 5.5rem;
+}
+
+.artist-profiles-subtitle {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.artist-filter-buttons {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.artist-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.artist-pagination {
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-page-info {
+  font-weight: 500;
+  font-size: 1rem;
+}

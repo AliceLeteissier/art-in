@@ -1,0 +1,40 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Sizes */
+.logo-small {
+  font-size: 1.2rem;
+}
+
+.logo-medium {
+  font-size: 1.6rem;
+}
+
+.logo-large {
+  font-size: 2.2rem;
+}
+
+.logo-extra-large {
+  font-size: 3rem;
+}
+
+/* Gradient text for Art */
+.logo-art {
+  background-image: linear-gradient(90deg, #0ea5e9, #8b5cf6, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Gradient text for in */
+.logo-in {
+  background-image: linear-gradient(90deg, #f59e0b, #ef4444);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
