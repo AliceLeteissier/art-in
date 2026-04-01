@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+## 🎨 ArtIn — Artist Profiles Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ArtIn is a full-stack web application designed to showcase and manage artist profiles in a clean, accessible, and visually engaging way. The platform allows users to explore artists from around the world, view detailed profile pages, and create or edit artist profiles through a multi-step form interface.
 
-## Available Scripts
+The project is built with a React frontend and a Node.js/Express backend, using MongoDB for data storage. It focuses on creating a smooth user experience for browsing artistic work while maintaining a structured and scalable data model for artist information, including artworks, mediums, and biographical details.
 
-In the project directory, you can run:
+Users can:
 
-### `npm start`
+* Browse a curated list of artist profiles
+* Filter artists by medium
+* View detailed individual artist pages
+* Create and edit artist profiles with structured data (bio, location, artworks, etc.)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+⚠️ **Important:** This is a **temporary version** of the application. A full authentication system (sign up / log in / user accounts) has **not yet been implemented**. Currently, all users can create and edit profiles without restriction. Future iterations of the project will include secure authentication, user-specific content management, and improved access control.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project is part of an ongoing development process and will continue to evolve with additional features, improved UI/UX, and production-ready enhancements.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
