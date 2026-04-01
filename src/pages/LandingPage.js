@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import heroImage from "../assets/gallery.png"; // add an image in src/assets/
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
