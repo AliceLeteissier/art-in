@@ -11,6 +11,8 @@ Users can:
 * View detailed individual artist pages
 * Create and edit artist profiles with structured data (bio, location, artworks, etc.)
 
+⚠️ **Disclaimer:** The API is currently hosted on render, so the rendering of the Artist profiles might take up to 50 sec upon first visit of the site.
+
 ⚠️ **Important:** This is a **temporary version** of the application. A full authentication system (sign up / log in / user accounts) has **not yet been implemented**. Currently, all users can create and edit profiles without restriction. Future iterations of the project will include secure authentication, user-specific content management, and improved access control.
 
 This project is part of an ongoing development process and will continue to evolve with additional features, improved UI/UX, and production-ready enhancements.
