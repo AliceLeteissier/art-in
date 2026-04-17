@@ -14,6 +14,19 @@ import ArtistResidencies from "../components/ArtistResidencies";
 import ArtistDistinctions from "../components/ArtistDistinctions";
 import ArtistActions from "../components/ArtistActions";
 
+// REVIEW: The API URL is hardcoded here instead of reusing the centralized
+// functions from api/artists.js. Both the fetch in useEffect and handleDelete
+// duplicate URLs that already exist in the API module.
+
+// REVIEW: console.log("Artist data:", data) on line 32 is debug output
+// left in production code — remove it.
+
+// REVIEW: handleDelete has no error handling. If the DELETE request fails
+// the user is still navigated away, and the artist may not actually be deleted.
+
+// REVIEW: No error state is shown to the user. If the fetch fails, the only
+// feedback is "Artist not found" which is misleading — it could be a network error.
+
 function ArtistProfilePage() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -68,10 +81,7 @@ function ArtistProfilePage() {
           <ArtistEducation education={artist.education} />
           <ArtistResidencies residencies={artist.residencies} />
           <ArtistDistinctions distinctions={artist.distinctions} />
-          <ArtistActions
-            id={id}
-            onDelete={handleDelete}
-          />
+          <ArtistActions id={id} onDelete={handleDelete} />
         </div>
       </div>
     </div>

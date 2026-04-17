@@ -4,6 +4,16 @@ import ProfileCard from "../components/ProfileCard";
 import { getArtists } from "../api/artists";
 import "../styles/artistProfiles.css";
 
+// REVIEW: No error handling around getArtists(). If the API call fails or
+// returns undefined, setProfiles(undefined) will crash the filter/map below.
+// Wrap in try/catch and add an error state for the user.
+
+// REVIEW: Filter medium options are hardcoded. If the API adds new mediums
+// they won't appear in the filter bar. Consider deriving mediums from the data.
+
+// REVIEW: When no profiles match the active filter, the grid is empty with
+// no message — add an empty state like "No artists found for this medium."
+
 function ArtistProfiles() {
   const [profiles, setProfiles] = useState([]);
   const [filter, setFilter] = useState("all");
@@ -73,10 +83,7 @@ function ArtistProfiles() {
             <p>Loading profiles...</p>
           ) : (
             paginatedProfiles.map((profile) => (
-              <ProfileCard
-                key={profile._id}
-                profile={profile}
-              />
+              <ProfileCard key={profile._id} profile={profile} />
             ))
           )}
         </div>

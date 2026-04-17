@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
 
+// REVIEW: Image alt="" is an empty string — should use the artist's name
+// or artwork title for accessibility (e.g. alt={profile.name}).
+
+// REVIEW: Inline styles throughout — consider moving to a dedicated CSS
+// file or adding to the existing artistProfiles.css.
+
 function ProfileCard({ profile }) {
   return (
     <Link
       to={`/artist/${profile._id}`}
       style={{ textDecoration: "none", color: "black" }}
     >
-      <div
-        className="card"
-        style={{ transition: "0.2s", cursor: "pointer" }}
-      >
+      <div className="card" style={{ transition: "0.2s", cursor: "pointer" }}>
         <div
           style={{
             width: "100%",

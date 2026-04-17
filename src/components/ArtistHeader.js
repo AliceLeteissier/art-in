@@ -1,3 +1,6 @@
+// REVIEW: If only city or only country is present, the output is
+// "Toronto, " or ", Canada" — render the comma conditionally.
+
 function ArtistHeader({ artist }) {
   return (
     <div className="artist-header">
