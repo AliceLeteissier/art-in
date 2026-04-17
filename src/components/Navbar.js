@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 import ArtInLogo from "./ArtInLogo";
 
+// REVIEW: Navbar.css exists with styles for .navbar, .hamburger, and
+// .mobile-menu but is never imported here. The component uses only inline
+// styles. Either import and use the CSS file or delete the unused CSS.
+
+// REVIEW: No responsive hamburger menu — on mobile the nav links are
+// invisible (Navbar.css hides .nav-right at 768px) but there is no
+// hamburger toggle implemented, so mobile users have no navigation.
+
+// REVIEW: Heavy use of inline styles. Move these to the Navbar.css file
+// for consistency and maintainability.
+
 function Navbar() {
   return (
     <div
@@ -22,10 +33,7 @@ function Navbar() {
           alignItems: "center",
         }}
       >
-        <Link
-          to="/"
-          style={{ textDecoration: "none", color: "black" }}
-        >
+        <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <ArtInLogo size="large" />
         </Link>
 
@@ -36,10 +44,7 @@ function Navbar() {
             alignItems: "center",
           }}
         >
-          <Link
-            to="/profiles"
-            className="nav-link"
-          >
+          <Link to="/profiles" className="nav-link">
             See Artist Profiles
           </Link>
 

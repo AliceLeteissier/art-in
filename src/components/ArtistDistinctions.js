@@ -1,3 +1,6 @@
+// REVIEW: Using array index as key — same concern as other list components.
+// Prefer a unique identifier from the data.
+
 function ArtistDistinctions({ distinctions }) {
   if (!distinctions || distinctions.length === 0) return null;
 

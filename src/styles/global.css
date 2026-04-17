@@ -1,3 +1,8 @@
+/* REVIEW: Setting the root font-size to a fixed 20px overrides the user's
+   browser font-size preference, which is an accessibility concern.
+   Consider using font-size: 125% instead so it scales relative to
+   the user's setting. */
+
 /* Root font scaling */
 html {
   font-size: 20px; /* 125% */

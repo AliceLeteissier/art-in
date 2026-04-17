@@ -1,16 +1,19 @@
 import Navbar from "../components/Navbar";
-import heroImage from "../assets/gallery.png"; // add an image in src/assets/
+import heroImage from "../assets/gallery.png";
 import { Link } from "react-router-dom";
+
+// REVIEW: Heavy inline styles throughout (font sizes, margins, padding).
+// Move these to a dedicated CSS file for consistency with the rest of the app.
+
+// REVIEW: The <title> is never set for this page — the browser tab shows
+// the default CRA title. Use document.title or react-helmet.
 
 function LandingPage() {
   return (
     <div>
       <Navbar />
 
-      <div
-        className="container"
-        style={{ paddingTop: "120px" }}
-      >
+      <div className="container" style={{ paddingTop: "120px" }}>
         <div className="hero">
           {/* LEFT SIDE */}
           <div className="hero-text">

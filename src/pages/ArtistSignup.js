@@ -4,6 +4,34 @@ import { createArtist } from "../api/artists";
 import { useNavigate } from "react-router-dom";
 import "../styles/signup.css";
 
+// REVIEW: The update path (when artistId is set) hardcodes the API URL
+// in both useEffect and handleSubmit instead of using the updateArtist
+// function already exported from api/artists.js.
+
+// REVIEW: Multiple console.log statements left in (lines 53, 145) —
+// remove debug logging before shipping.
+
+// REVIEW: handleImageUpload creates object URLs via URL.createObjectURL()
+// but never calls URL.revokeObjectURL() — this is a memory leak.
+
+// REVIEW: handleImageUpload is defined but never wired to any <input
+// type="file" />. The artwork image field is a plain text URL input,
+// making handleImageUpload dead code.
+
+// REVIEW: In handleSubmit, `description` is set to the same value as
+// `bio` — this looks like a copy-paste bug. Description should have its
+// own field or be intentionally omitted.
+
+// REVIEW: No error handling on handleSubmit. If the create/update API
+// call fails, the user still sees "Profile created/updated" and gets
+// redirected.
+
+// REVIEW: No validation on step 3 (artwork fields). Users can submit
+// artworks with empty titles or years.
+
+// REVIEW: Using Date.now() for artwork ids can cause key collisions
+// if two items are added in the same millisecond tick.
+
 function ArtistSignup({ artistId }) {
   const navigate = useNavigate();
 
@@ -292,10 +320,7 @@ function ArtistSignup({ artistId }) {
               <p className="signup-header">Add Artworks</p>
 
               {artworks.map((art) => (
-                <div
-                  key={art.id}
-                  className="art-card"
-                >
+                <div key={art.id} className="art-card">
                   <input
                     placeholder="Artwork Title"
                     className="form-input"
@@ -337,19 +362,11 @@ function ArtistSignup({ artistId }) {
                     }
                   />
 
-                  {art.imagePreview && (
-                    <img
-                      src={art.imagePreview}
-                      alt=""
-                    />
-                  )}
+                  {art.imagePreview && <img src={art.imagePreview} alt="" />}
                 </div>
               ))}
 
-              <button
-                className="btn-small"
-                onClick={addArtwork}
-              >
+              <button className="btn-small" onClick={addArtwork}>
                 + Add Artwork
               </button>
             </div>
@@ -359,10 +376,7 @@ function ArtistSignup({ artistId }) {
           {step === 4 && (
             <div className="step center">
               <p className="signup-header">Ready to submit?</p>
-              <button
-                className="btn-submit"
-                onClick={handleSubmit}
-              >
+              <button className="btn-submit" onClick={handleSubmit}>
                 {artistId ? "Update Profile" : "Create Profile"}
               </button>
             </div>
@@ -371,18 +385,12 @@ function ArtistSignup({ artistId }) {
           {/* NAVIGATION */}
           <div className="nav-buttons">
             {step > 1 && (
-              <button
-                className="btn-small left"
-                onClick={prevStep}
-              >
+              <button className="btn-small left" onClick={prevStep}>
                 Previous
               </button>
             )}
             {step < 4 && (
-              <button
-                className="btn-primary"
-                onClick={nextStep}
-              >
+              <button className="btn-primary" onClick={nextStep}>
                 Next
               </button>
             )}

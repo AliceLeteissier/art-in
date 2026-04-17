@@ -12,6 +12,9 @@
   line-height: 0.3em;
 }
 
+/* REVIEW: The universal * { box-sizing } selector belongs in global.css,
+   not in a page-specific stylesheet. It will only take effect when this
+   CSS file is loaded, causing inconsistent box-sizing across pages. */
 * {
   box-sizing: border-box;
 }
@@ -31,6 +34,8 @@
 }
 
 /* STEP AREA */
+/* REVIEW: "margin-top: 0 px" is a CSS syntax error (space between 0 and px).
+   It should be "margin-top: 0" or "margin-top: 0px". */
 .step {
   flex: 1;
   overflow-y: auto;
@@ -40,6 +45,10 @@
   flex-direction: column;
   gap: 15px;
 }
+
+/* REVIEW: .form-input is already defined in global.css with different
+   padding values (0.75rem vs 10px). This duplicate causes specificity
+   conflicts depending on CSS load order. Remove one or merge them. */
 
 /* INPUTS */
 .form-input {
@@ -56,6 +65,9 @@
   gap: 15px;
 }
 
+/* REVIEW: Error text is styled with color: #777 (gray) which does not
+   visually convey an error. Use red (#e53e3e or similar) so users can
+   immediately see something is wrong. */
 /* ERROR */
 .error {
   font-size: 12px;

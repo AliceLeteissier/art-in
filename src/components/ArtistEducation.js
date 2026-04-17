@@ -1,3 +1,5 @@
+// REVIEW: Using array index as key — same concern as other list components.
+
 function ArtistEducation({ education }) {
   if (!education || education.length === 0) return null;
 

@@ -1,3 +1,11 @@
+/* REVIEW: This entire CSS file is never imported by any component.
+   The Navbar component uses inline styles instead. Either import this
+   file in Navbar.js and use these classes, or delete this file. */
+
+/* REVIEW: Styles for .hamburger and .mobile-menu are defined here but
+   the Navbar component never renders elements with those classes — this
+   is dead CSS. */
+
 .navbar {
   position: fixed;
   top: 0;
