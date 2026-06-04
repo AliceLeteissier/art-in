@@ -92,7 +92,7 @@ function ArtistProfiles() {
           </button>
 
           <span className="artist-page-info">
-            Page {page} of {totalPages || 1}
+            {page} of {totalPages || 1}
           </span>
 
           <button
