@@ -1,7 +1,7 @@
 /* LANDING PAGE */
 
-.landing-wrapper {
-  padding-top: 120px;
+.container.landing-wrapper {
+  margin-top: 120px;
 }
 
 .hero-heading {
@@ -22,8 +22,8 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-  .landing-wrapper {
-    padding-top: 90px;
+  .container.landing-wrapper {
+    margin-top: 90px;
   }
 
   .hero-heading {
