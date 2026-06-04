@@ -1,54 +1,64 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ArtInLogo from "./ArtInLogo";
+import "../styles/Navbar.css";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        width: "100%",
-        background: "white",
-        borderBottom: "1px solid #eee",
-        padding: "16px 0",
-        zIndex: 1000,
-      }}
-    >
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+    <nav className="navbar">
+      <div className="container navbar-inner">
         <Link
           to="/"
-          style={{ textDecoration: "none", color: "black" }}
+          className="logo-link"
         >
           <ArtInLogo size="large" />
         </Link>
 
-        <div
-          style={{
-            display: "flex",
-            gap: "20px",
-            alignItems: "center",
-          }}
-        >
+        {/* Desktop links */}
+        <div className="nav-right">
           <Link
             to="/profiles"
             className="nav-link"
           >
             See Artist Profiles
           </Link>
-
           <Link to="/signup">
             <button className="btn btn-black">Sign Up</button>
           </Link>
         </div>
+
+        {/* Hamburger */}
+        <div
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
-    </div>
+
+      {/* Mobile dropdown */}
+      {menuOpen && (
+        <div className="mobile-menu">
+          <Link
+            to="/profiles"
+            onClick={() => setMenuOpen(false)}
+          >
+            See Artist Profiles
+          </Link>
+          <Link
+            to="/signup"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sign Up
+          </Link>
+        </div>
+      )}
+    </nav>
   );
 }
 

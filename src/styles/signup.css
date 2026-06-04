@@ -2,14 +2,14 @@
 .signup-page {
   background: #f7f7f7;
   min-height: 100vh;
-  padding-top: 120px; /* space under fixed navbar */
+  padding-top: 120px;
   display: flex;
   justify-content: center;
 }
 
 .signup-header {
   text-align: center;
-  line-height: 0.3em;
+  line-height: 1.3em;
 }
 
 * {
@@ -25,7 +25,6 @@
   padding: 35px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-
   display: flex;
   flex-direction: column;
 }
@@ -34,8 +33,6 @@
 .step {
   flex: 1;
   overflow-y: auto;
-  margin-top: 0 px;
-
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -143,4 +140,40 @@
   width: 220px;
   align-self: center;
   font-size: 18px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .signup-page {
+    padding-top: 80px;
+    align-items: flex-start;
+  }
+
+  .signup-card {
+    height: auto;
+    min-height: calc(100vh - 80px);
+    padding: 20px 16px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .medium-grid {
+    margin-top: 1.5em;
+    gap: 10px;
+  }
+
+  .medium-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    margin-top: 2em;
+    font-size: 16px;
+  }
 }

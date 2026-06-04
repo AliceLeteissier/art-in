@@ -1,0 +1,40 @@
+/* LANDING PAGE */
+
+.landing-wrapper {
+  padding-top: 120px;
+}
+
+.hero-heading {
+  font-size: 58px;
+  line-height: 1.2;
+}
+
+.hero-subtext {
+  color: #555;
+  max-width: 500px;
+}
+
+.hero-cta {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .landing-wrapper {
+    padding-top: 90px;
+  }
+
+  .hero-heading {
+    font-size: 32px;
+    padding-top: 20px;
+  }
+
+  .hero-subtext {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.4em;
+    padding-bottom: 50px;
+  }
+}
