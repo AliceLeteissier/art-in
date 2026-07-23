@@ -10,7 +10,7 @@ function LandingPage() {
 
       <div className="container landing-wrapper">
         <div className="hero">
-          {/* LEFT SIDE */}
+          {/* LEFT SIDE TEXT */}
           <div className="hero-text">
             <h1 className="hero-heading">
               The Professional Network for the Art World
@@ -20,16 +20,6 @@ function LandingPage() {
               Connect with artists, curators, galleries, and institutions.
               Showcase your work and build your professional presence.
             </p>
-
-            <div className="hero-cta">
-              <Link to="/signup">
-                <button className="btn btn-black">Get Started</button>
-              </Link>
-
-              <Link to="/profiles">
-                <button className="btn btn-outline">Explore Profiles</button>
-              </Link>
-            </div>
           </div>
 
           {/* RIGHT SIDE IMAGE */}
@@ -44,6 +34,17 @@ function LandingPage() {
                 borderRadius: "12px",
               }}
             />
+          </div>
+
+          {/* CTA BUTTONS - sibling of hero-text and hero-image so it can be reordered on mobile */}
+          <div className="hero-cta">
+            <Link to="/signup">
+              <button className="btn btn-black">Get Started</button>
+            </Link>
+
+            <Link to="/profiles">
+              <button className="btn btn-outline">Explore Profiles</button>
+            </Link>
           </div>
         </div>
       </div>

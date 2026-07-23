@@ -8,14 +8,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
   background: #ffffff;
   color: #111111;
-  line-height: 2; /* 1.6 Ã— 1.25 */
+  line-height: 2; /* 1.6 × 1.25 */
 }
 
 /* Layout container */
 .container {
-  max-width: 93.75rem; /* 75 Ã— 1.25 */
+  max-width: 93.75rem; /* 75 × 1.25 */
   margin: 0 auto;
-  padding: 0 4rem; /* 1.5 Ã— 1.25 */
+  padding: 0 4rem; /* 1.5 × 1.25 */
 }
 
 /* Buttons */
@@ -57,7 +57,7 @@ body {
   gap: 1.875rem;
 }
 
-/*Navbar */
+/* Navbar */
 
 .nav-link {
   text-decoration: none;
@@ -71,18 +71,26 @@ body {
 
 /* Hero */
 .hero {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "text image"
+    "cta  image";
   gap: 3.125rem;
   align-items: center;
 }
 
 .hero-text {
-  flex: 1;
+  grid-area: text;
 }
 
 .hero-image {
-  flex: 1;
+  grid-area: image;
   height: 31.25rem;
+}
+
+.hero-cta {
+  grid-area: cta;
 }
 
 /* Form */
@@ -110,12 +118,23 @@ body {
   }
 
   .hero {
+    display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-text {
+    order: 1;
   }
 
   .hero-image {
     width: 100%;
     height: 22.5rem;
+    order: 2;
+  }
+
+  .hero-cta {
+    order: 3;
   }
 
   .grid-3 {

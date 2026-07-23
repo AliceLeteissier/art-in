@@ -23,18 +23,18 @@
 /* Mobile */
 @media (max-width: 768px) {
   .container.landing-wrapper {
-    margin-top: 90px;
+    margin-top: 60px;
   }
 
   .hero-heading {
-    font-size: 32px;
-    padding-top: 20px;
+    font-size: 40px;
+    padding-top: 10px;
   }
 
   .hero-subtext {
     max-width: 100%;
     font-size: 18px;
     line-height: 1.4em;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
   }
 }
